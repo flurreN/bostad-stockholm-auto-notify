@@ -1,10 +1,10 @@
 # bostad-stockholm-auto-notify
 
-## What is this code doing?
+## What is this project doing?
 
-This code is a web scraper that extracts information about apartments from https://bostad.stockholm.se. It keeps track of the data stored in the database to determine what to send to a Discord webhook as a notification when a new apartment matching specified filters is found.
+This project is a web scraper that extracts information about apartments from https://bostad.stockholm.se and sends notifications to a Discord webhook when a new apartment matching specified filters is found. The code uses the Selenium and BeautifulSoup libraries to navigate the website and extract relevant information. The apartment data is then stored in a free Firestore database to keep track of what has been posted to Discord.
 
-The code uses the Selenium and BeautifulSoup libraries to navigate the website and extract relevant information. The apartment data is stored in the Firebase database.
+![image](https://user-images.githubusercontent.com/4808216/208787085-6135fa42-1f6a-4e84-98d0-168d36fb35e5.png)
 
 ## Prerequisites
 
