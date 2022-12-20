@@ -21,7 +21,22 @@ If you are running this code in a GitHub Action, you will need to set `FIREBASE_
 - `DISCORD_WEBHOOK_URL`: Discord webhook url
 - `INPUT_APARTMENTS_URL` (OPTIONAL): The URL of the apartment listing website to scrape.Defaults to `https://bostad.stockholm.se/bostad/?sort=annonserad-fran-desc&ungdom=1` if the `APARTMENTS_URL` environment variable is not set.
 - `INPUT_APARTMENTS_FILTER` (OPTIONAL): A dictionary of filters to apply to the apartment listings. Defaults to `None` if the `APARTMENTS_FILTER` environment variable is not set or is not a valid JSON object.
-  Example value: `{"youth": true, "age": "23"}`.
+  Example value: `{"youth": true, "age": "23"}`. Full list of available filter values.
+  ```
+  {
+    "address": "Kristinehovsgatan 23",
+    "location": "Stockholm, Södermalm",
+    "last_register_date": "2022-12-20",
+    "rent": 5114,
+    "level": "6",
+    "rooms": 1,
+    "square_meter": 26,
+    "age": "23",
+    "youth": true,
+    "youth_temporary": True,
+    "link": "https://bostad.stockholm.se/bostad/202222315",
+  }
+  ```
 
 ## How to use
 
