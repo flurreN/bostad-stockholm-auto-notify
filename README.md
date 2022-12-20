@@ -40,7 +40,7 @@ If you are running this code in a GitHub Action, you will need to set `FIREBASE_
 
 ## How to use
 
-1. Clone this repository and navigate to the root directory.
+1. Clone this repository or use it as a template.
 2. Set the `DISCORD_WEBHOOK_URL` and `FIREBASE_ACCOUNT` environment variables with your Discord webhook URL and Firebase credentials, respectively as Github Secrets
 3. Update the `APARTMENTS_URL` and `APARTMENTS_FILTER` environment variables in the workflow if you want to override the default values for `INPUT_APARTMENTS_URL` and `INPUT_APARTMENTS_FILTER`. These has to be removed to get use the default value
 4. Pipeline will trigger the script on push and on cronjob trigger
