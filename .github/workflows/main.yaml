@@ -1,0 +1,32 @@
+name: Build and Run
+
+on: 
+  schedule:
+    - cron: '0 16 * * 1-5'
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.8"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: PyTest
+        run: python -m pytest
+  build-and-run:
+    runs-on: ubuntu-latest
+    env:
+      # You can update or remove these environment variables
+      APARTMENTS_URL: "https://bostad.stockholm.se/bostad/?sort=annonserad-fran-desc&ungdom=1&s=59.30180&n=59.40654&w=17.71385&e=18.22077"
+      APARTMENTS_FILTER: '{"youth":true, "age":"23"}'
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build
+        run: docker build . -t bostad-stockholm-auto-notify
+      - name: Run
+        run: docker run --rm --shm-size=2gb -e FIREBASE_ACCOUNT='${{ secrets.FIREBASE_ACCOUNT }}' -e DISCORD_WEBHOOK_URL='${{ secrets.DISCORD_WEBHOOK_URL }}' -e APARTMENTS_URL='${{ env.APARTMENTS_URL }}' -e APARTMENTS_FILTER='${{ env.APARTMENTS_FILTER }}' bostad-stockholm-auto-notify
