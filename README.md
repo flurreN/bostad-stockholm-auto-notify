@@ -7,7 +7,7 @@ This project is a web scraper that extracts information about apartments from ht
 ![image](https://user-images.githubusercontent.com/4808216/208787085-6135fa42-1f6a-4e84-98d0-168d36fb35e5.png)
 
 ## Prerequisites
-
+a
 To use this code, you will need the following:
 
 - A Discord webhook URL. You can create a webhook in your Discord server settings.
