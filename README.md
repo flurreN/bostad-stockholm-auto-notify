@@ -1,10 +1,10 @@
 # bostad-stockholm-auto-notify
 
-## What is this code doing?
+## What is this project doing?
 
-This code is a web scraper that extracts information about apartments from https://bostad.stockholm.se. It keeps track of the data stored in the database to determine what to send to a Discord webhook as a notification when a new apartment matching specified filters is found.
+This project is a web scraper that extracts information about apartments from https://bostad.stockholm.se and sends notifications to a Discord webhook when a new apartment matching specified filters is found. The code uses the Selenium and BeautifulSoup libraries to navigate the website and extract relevant information. The apartment data is then stored in a free Firestore database to keep track of what has been posted to Discord.
 
-The code uses the Selenium and BeautifulSoup libraries to navigate the website and extract relevant information. The apartment data is stored in the Firebase database.
+![image](https://user-images.githubusercontent.com/4808216/208787085-6135fa42-1f6a-4e84-98d0-168d36fb35e5.png)
 
 ## Prerequisites
 
@@ -40,7 +40,7 @@ If you are running this code in a GitHub Action, you will need to set `FIREBASE_
 
 ## How to use
 
-1. Clone this repository and navigate to the root directory.
+1. Clone this repository or use it as a template.
 2. Set the `DISCORD_WEBHOOK_URL` and `FIREBASE_ACCOUNT` environment variables with your Discord webhook URL and Firebase credentials, respectively as Github Secrets
 3. Update the `APARTMENTS_URL` and `APARTMENTS_FILTER` environment variables in the workflow if you want to override the default values for `INPUT_APARTMENTS_URL` and `INPUT_APARTMENTS_FILTER`. These has to be removed to get use the default value
 4. Pipeline will trigger the script on push and on cronjob trigger
