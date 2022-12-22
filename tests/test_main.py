@@ -56,10 +56,9 @@ def test_get_apartment_info(apartment_id, apartment):
 def test_get_all_apartments_with_filter():
     apartments = get_all_apartments(
         "https://bostad.stockholm.se/bostad?s=59.19477&n=59.40266&w=17.84077&e=18.19782&sort=annonserad-fran-desc&vanlig=1&ungdom=1",
-        {"youth": True, "age": "18-24"},
+        {"youth": True},
     )
     assert all(apartment_info["youth"] for apartment_info in apartments.values())
-    assert all(apartment_info["age"] == "18-24" for apartment_info in apartments.values())
 
 
 def test_get_all_apartments_with_filter_no_result():
