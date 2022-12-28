@@ -66,7 +66,12 @@ def get_apartment_info(apartment_id):
     # General info
     apartment["address"] = soup.find("div", class_="apartment-header").find("h1").text
     apartment["location"] = soup.find(class_="align-self-end").text
-    apartment["last_register_date"] = soup.select_one("footer.house-footer.u-m-t span").text.strip()
+
+    # Dont add last_register_date if house is not available to register for
+    if soup.select_one("footer.house-footer.u-m-t span") is not None:
+        apartment["last_register_date"] = soup.select_one(
+            "footer.house-footer.u-m-t span"
+        ).text.strip()
 
     # Apartment info
     apartment_info = soup.find(class_="apartment-header__info").text
