@@ -23,7 +23,7 @@ def test_get_website(url, sleep):
             {
                 "address": "Kristinehovsgatan 23",
                 "location": "Stockholm, Södermalm",
-                "last_register_date": "2022-12-20",
+                # "last_register_date": "2022-12-20",
                 "rent": 5114,
                 "level": "6",
                 "rooms": 1,
@@ -39,7 +39,7 @@ def test_get_website(url, sleep):
             {
                 "address": "Mässvägen 10",
                 "location": "Botkyrka, Tullinge",
-                "last_register_date": "2022-12-21",
+                # "last_register_date": "2022-12-21",
                 "rent": 4868,
                 "level": "1",
                 "rooms": 1,
