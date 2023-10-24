@@ -91,4 +91,4 @@ class ApartmentUseCase:
         return self.apartment_repository.post_apartment_listing(apartment)
 
     def post_to_discord(self, apartment):
-        self.discord_infrastructure.send_messege(str(apartment))
+        self.discord_infrastructure.send_message(str(apartment))

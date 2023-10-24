@@ -16,9 +16,9 @@ class TestDiscordInfrastructure(unittest.TestCase):
         # Stop the patcher to clean up
         self.patcher.stop()
 
-    def test_send_messege(self):
+    def test_send_message(self):
         message = "Test message"
-        self.discord.send_messege(message)
+        self.discord.send_message(message)
 
         # Check that requests.post was called with the expected arguments
         self.mock_requests.assert_called_once_with(self.webhook_url, json={"content": message}, timeout=5)
