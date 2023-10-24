@@ -22,8 +22,7 @@ if __name__ == "__main__":
     INPUT_DISCORD_WEBHOOK_URL = os.environ["DISCORD_WEBHOOK_URL"]
     INPUT_APARTMENTS_URL = (
         os.environ.get("APARTMENTS_URL")
-        #or "https://bostad.stockholm.se/bostad/?sort=annonserad-fran-desc&ungdom=1"
-        or "https://bostad.stockholm.se/bostad/?sort=annonserad-fran-desc&ungdom=1&s=59.33489&n=59.34250&w=18.04110&e=18.05474&hide-filter=true"
+        or "https://bostad.stockholm.se/bostad/?sort=annonserad-fran-desc&ungdom=1"
     )
     INPUT_APARTMENTS_FILTER = os.environ.get("APARTMENTS_FILTER")  # Defaults to None if env not set
     if INPUT_APARTMENTS_FILTER:
