@@ -1,7 +1,7 @@
-from repositories.apartment_firestore import ApartmentFirestoreRepository
-from usecase.apartment import ApartmentUseCase
-from infrastructure.discord import DiscordInfrastructure
-from repositories.scraper import ScraperRepository
+from src.repositories.apartment_firestore import ApartmentFirestoreRepository
+from src.usecase.apartment import ApartmentUseCase
+from src.infrastructure.discord import DiscordInfrastructure
+from src.repositories.scraper import ScraperRepository
 from firebase_admin import credentials
 
 import os

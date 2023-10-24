@@ -1,7 +1,7 @@
-from entities.apartment import Apartment
-from repositories.scraper import ScraperRepository
-from repositories.apartment_firestore import ApartmentFirestoreRepository
-from infrastructure.discord import DiscordInfrastructure
+from src.entities.apartment import Apartment
+from src.repositories.scraper import ScraperRepository
+from src.repositories.apartment_firestore import ApartmentFirestoreRepository
+from src.infrastructure.discord import DiscordInfrastructure
 import re
 
 class ApartmentUseCase:

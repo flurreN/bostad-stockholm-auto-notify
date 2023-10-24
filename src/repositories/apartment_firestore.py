@@ -4,7 +4,7 @@ import firebase_admin
 from firebase_admin import firestore
 from google.api_core import exceptions
 
-from entities.apartment import Apartment
+from src.entities.apartment import Apartment
 
 class ApartmentFirestoreRepository:
     def __init__(self, credentials):
