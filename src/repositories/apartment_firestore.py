@@ -1,16 +1,12 @@
 import os
-import firebase_admin
 
-from firebase_admin import firestore
 from google.api_core import exceptions
 
 from src.entities.apartment import Apartment
 
 class ApartmentFirestoreRepository:
-    def __init__(self, credentials):
-        firebase_admin.initialize_app(credentials)
-
-        self.db = firestore.client()
+    def __init__(self, db):
+        self.db = db
         self.collection_name = "apartment_listings"
 
     def post_apartment_listing(self, apartment: Apartment):
