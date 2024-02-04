@@ -13,7 +13,7 @@ jobs:
     env:
       # You can update or remove these environment variables
       APARTMENTS_URL: "https://bostad.stockholm.se/bostad/?sort=annonserad-fran-desc&ungdom=1&s=59.30180&n=59.40654&w=17.71385&e=18.22077"
-      APARTMENTS_FILTER: '{"youth":True, "age":"24"}'
+      APARTMENTS_FILTER: '{"youth":true, "age":"23"}'
     steps:
       - uses: actions/checkout@v3
       - name: Build
